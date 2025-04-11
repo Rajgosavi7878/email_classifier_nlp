@@ -5,6 +5,7 @@ from string import punctuation
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
 from pickle import load
+import nltk
 
 try:
     nltk.data.find('corpora/stopwords')
