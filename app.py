@@ -15,7 +15,7 @@ except LookupError:
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt')
+    nltk.download('punkt_tab')
 
 # save the model and vector
 f = open("spam_model.pkl","rb")
