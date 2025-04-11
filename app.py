@@ -6,6 +6,16 @@ from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
 from pickle import load
 
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 # save the model and vector
 f = open("spam_model.pkl","rb")
 model = load(f)
